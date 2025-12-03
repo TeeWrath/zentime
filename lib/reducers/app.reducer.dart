@@ -45,7 +45,7 @@ ClockState appReducer(ClockState state, dynamic action) {
       (element) => element.id == action.alarmId,
     );
 
-    if (alarmIdx != 1) {
+    if (alarmIdx != -1) {
       final alarm = state.alarms[alarmIdx];
       final updatedAlarms = List<AlarmModel>.from(state.alarms);
       updatedAlarms[alarmIdx] = alarm.copyWith(
